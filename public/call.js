@@ -1,7 +1,7 @@
 
 async function fetchAPI() {
   try {
-    const response = await fetch("http://localhost:3000/");
+    const response = await fetch("/.netlify/functions/api");
     const data = await response.json();
 
     document.getElementById("email").textContent = data.email;
