@@ -1,6 +1,6 @@
 [build]
-  functions = "functions" 
-  publish = "public"       
+  functions = "ApiCall/functions" 
+  publish = "ApiCall/public"       
 
 [[redirects]]
   from = "/api/*"
