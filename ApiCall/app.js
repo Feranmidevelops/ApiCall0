@@ -6,9 +6,9 @@ app.use(cors());
 
 app.get('/', (req, res) => {
     res.json({
-        email: "feranmioyetunde@gmail.com", 
+        email: "feranmioyetunde@gmail.com",
         current_datetime: new Date().toISOString(),
-        github_url: "https://github.com/Feranmidevelops/ApiCall0"
+        github_url: "https://github.com/Feranmidevelops"
     });
 });
 
