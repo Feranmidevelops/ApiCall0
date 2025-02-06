@@ -1,19 +1,16 @@
-module.exports.handler = async () => {
+const express = require('express');
+const cors = require('cors');
 
-   
-    const response = {
-      email: 'feranmioyetunde@gmail.com',
-      current_datetime: new Date().toISOString(),
-      github_url: 'https://github.com/Feranmidevelops/ApiCall0',
-    };
-  
-    return {
-      statusCode: 200,
-      headers: {
-        "Access-Control-Allow-Origin": "*", 
-        "Access-Control-Allow-Methods": "GET, OPTIONS",  
-        "Access-Control-Allow-Headers": "Content-Type",  },
-      body: JSON.stringify(response),
-    };
-  };
-  
+const app = express();
+app.use(cors());
+
+app.get('/', (req, res) => {
+    res.json({
+        email: "feranmioyetunde@gmail.com", 
+        current_datetime: new Date().toISOString(),
+        github_url: "https://github.com/Feranmidevelops/ApiCall0"
+    });
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
